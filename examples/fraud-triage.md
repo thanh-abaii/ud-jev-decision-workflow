@@ -75,11 +75,11 @@ async def evaluate_transaction_semantics(tx: dict):
         "behavioral_fit": {
             "type": "score",
             "instructions": "Rate how well this transaction matches the declared cardholder profile and historical habits.",
-            "criteria": {
-                "1": "Completely discordant: Merchant and geography are alien to user profile.",
-                "2": "Plausible variation: Unusual location or category, but not inherently suspicious.",
-                "3": "Consistent: Typical recurring merchant or standard consumer category."
-            }
+            "criteria": [
+                "Completely discordant: Merchant and geography are alien to user profile.",
+                "Plausible variation: Unusual location or category, but not inherently suspicious.",
+                "Consistent: Typical recurring merchant or standard consumer category."
+            ]
         },
         "dispute_risk": {
             "type": "noul",

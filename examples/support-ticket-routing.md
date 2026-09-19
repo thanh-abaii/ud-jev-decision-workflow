@@ -108,11 +108,11 @@ export async function evaluateTicketSemantics(state: any) {
     urgency_level: {
       type: "score",
       instructions: "Assess user-perceived operational urgency based on business impact.",
-      criteria: {
-        1: "Low: Question or minor cosmetic glitch; work unaffected.",
-        2: "Medium: Significant friction; user can perform workaround.",
-        3: "High: Entire team or critical system offline; blocking production."
-      }
+      criteria: [
+        "Low: Question or minor cosmetic glitch; work unaffected.",
+        "Medium: Significant friction; user can perform workaround.",
+        "High: Entire team or critical system offline; blocking production."
+      ]
     }
   });
 }
