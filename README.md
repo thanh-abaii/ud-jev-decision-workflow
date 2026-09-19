@@ -80,16 +80,16 @@ Hai kỹ năng bổ trợ hoàn hảo cho nhau. Official `typesafe-ai` skill là
 
 Yêu cầu môi trường: Node.js (hỗ trợ `npx`).
 
-### A. Cài đặt toàn cục trên toàn máy (`-g`)
+### A. Cài đặt toàn cục qua GitHub (Khuyến nghị cho mọi người dùng)
 
-Cài đặt để mọi dự án và phiên làm việc của agent trên máy đều tự động nhận diện skill:
+Cài đặt trực tiếp từ kho lưu trữ GitHub chính thức để mọi dự án và phiên làm việc của agent trên máy đều tự động nhận diện skill:
 
 ```powershell
 # Dành riêng cho Codex
-npx skills add "d:\Scripts\ud-jev-decision-workflow" --skill ud-jev-decision-workflow -a codex -g -y
+npx skills add thanh-abaii/ud-jev-decision-workflow --skill ud-jev-decision-workflow -a codex -g -y
 
 # Dành cho tất cả các Agent trên máy (Codex, Antigravity, Claude Code, Cline...)
-npx skills add "d:\Scripts\ud-jev-decision-workflow" --skill ud-jev-decision-workflow -a '*' -g -y
+npx skills add thanh-abaii/ud-jev-decision-workflow --skill ud-jev-decision-workflow -a '*' -g -y
 ```
 
 ### B. Cài đặt theo từng dự án (Project-level)
@@ -97,14 +97,16 @@ npx skills add "d:\Scripts\ud-jev-decision-workflow" --skill ud-jev-decision-wor
 Đứng từ thư mục dự án của bạn (consumer project) và chạy:
 
 ```powershell
-npx skills add "d:\Scripts\ud-jev-decision-workflow" --skill ud-jev-decision-workflow -a codex -y
+npx skills add thanh-abaii/ud-jev-decision-workflow --skill ud-jev-decision-workflow -a codex -y
 ```
-Skill sẽ được sao chép vào `<your-project>/.agents/skills/ud-jev-decision-workflow`.
+Skill sẽ được nạp vào thư mục `<your-project>/.agents/skills/ud-jev-decision-workflow`.
 
-### C. Cài đặt sau khi xuất bản lên Git / GitHub
+### C. Cài đặt từ mã nguồn cục bộ (Dành cho nhà phát triển)
+
+Nếu bạn đang phát triển hoặc kiểm thử trực tiếp từ thư mục mã nguồn trên máy:
 
 ```powershell
-npx skills add your-username/ud-jev-decision-workflow --skill ud-jev-decision-workflow -a codex -g -y
+npx skills add "d:\Scripts\ud-jev-decision-workflow" --skill ud-jev-decision-workflow -a codex -g -y
 ```
 
 ---
