@@ -15,6 +15,7 @@ yarn-error.log*
 .system_generated/
 tmp/
 scratch/
+AGENTS.md
 
 # Operating System & IDE
 Thumbs.db
